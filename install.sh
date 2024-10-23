@@ -3,7 +3,7 @@
 red='\033[1;91m'          # Red
 green='\033[1;92m'        # Green
 yellow='\033[1;93m'       # Yellow
-White='\033[1;97m'        # White
+White='\033[0m'           # White
 blue='\033[1;94m'         # blue
 
 # check root
@@ -33,13 +33,14 @@ echo "The OS release is: $release"
   mkdir /etc/warp
   wget --no-check-certificate -O /etc/warp/docker-compose.yml https://raw.githubusercontent.com/sh-vp/warp-docker/main/docker-compose.yml
   cd /etc/warp && docker-compose up -d
-  clear
-echo -e "${yellow} _       __                    _____           _       __ "
-echo -e "${yellow}| |     / /___ __________     / ___/__________(_)___  / /_"
-echo -e "${yellow}| | /| / / __ `/ ___/ __ \    \__ \/ ___/ ___/ / __ \/ __/"
-echo -e "${yellow}| |/ |/ / /_/ / /  / /_/ /   ___/ / /__/ /  / / /_/ / /_  "
-echo -e "${yellow}|__/|__/\__,_/_/  / .___/   /____/\___/_/  /_/ .___/\__/  "
-echo -e "${yellow}                 /_/                        /_/           "
+  clear 
+echo ""    
+echo -e "${yellow} _       __                    _____           _       __ ${White}"
+echo -e "${yellow}| |     / /___ __________     / ___/__________(_)___  / /_${White}"
+echo -e "${yellow}| | /| / / __  / ___/ __ \    \__ \/ ___/ ___/ / __ \/ __/${White}"
+echo -e "${yellow}| |/ |/ / /_/ / /  / /_/ /   ___/ / /__/ /  / / /_/ / /_  ${White}"
+echo -e "${yellow}|__/|__/\__,_/_/  / .___/   /____/\___/_/  /_/ .___/\__/  ${White}"
+echo -e "${yellow}                 /_/                        /_/           ${White}"
 echo -e ""
 echo -e "${red}============================================"
 echo -e ""
