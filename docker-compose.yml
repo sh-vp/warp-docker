@@ -1,0 +1,9 @@
+services:
+  warproxy:
+    image: ghcr.io/kingcc/warproxy:latest
+    restart: always
+    environment:
+      - WARP_PLUS=true
+      - SOCKS5_PORT=40000
+    ports:
+      - 127.0.0.1:40000:40000
